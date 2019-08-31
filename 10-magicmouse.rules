@@ -1,0 +1,6 @@
+
+SUBSYSTEMS=="input", \
+    ATTRS{phys}=="d0:c6:37:e4:5f:fb", \
+    ACTION=="add", \
+    SYMLINK+="input/magicmouse", \
+    RUN+="/home/dan/Code/magic-mouse-2/magic-mouse-2-add.sh"
