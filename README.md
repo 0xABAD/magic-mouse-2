@@ -12,12 +12,18 @@ at it only involves `udev` which is standard with any modern Linux kernel.
   responsibility for any damage that may occur on yours.  As with anything you find on the
   internet... **USE AT YOUR OWN RISK**.
 
+**UPDATE**: [RicardoEPRodrigues](https://github.com/RicardoEPRodrigues) has created a [one
+stop shop](https://github.com/RicardoEPRodrigues/Linux-Magic-Trackpad-2-Driver) that builds
+and installs the driver, necessary udev rules, and load script with a single install script.
+While this repo remains here for informational purposes your best bet is to checkout his
+work and not fuss with all these details.
+
 
 Requirements
 ------------
 
 Apple's Magic Mouse 1 works with Ubuntu out of the box (I tried with a co-worker's), Magic
-Mouse 2 on the hand does not work completely (no scrolling) as it speaks a different
+Mouse 2 on the other hand does not work completely (no scrolling) as it speaks a different
 protocol.  Thankfully, someone has written a working driver that you can get from here:
 
 [Linux Magic Mouse 2 Driver](https://github.com/rohitpid/Linux-Magic-Trackpad-2-Driver)
@@ -131,6 +137,6 @@ sudo udevadm control -R
 
 With that in place the Magic Mouse 2 will now be properly loaded with scrolling when
 connected via Bluetooth.  Note that isn't perfect and sometimes the kernel will attempt to
-reload the driver several times and may a few seconds.  Also, your mouse may randomly
+reload the driver several times every a few seconds.  Also, your mouse may randomly
 disconnect at times but this was happening to me before applying this fix, may be
 related to a kernel battery power management issue, and something I am looking into.
